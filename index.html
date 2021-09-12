@@ -7,6 +7,8 @@
     <link rel="icon" href="./images/library-icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f0f9f1bddf.js" crossorigin="anonymous"></script>
+    <meta name="google-signin-client_id" content="708556494888-torhc96liijk13b9av7c2nm02qplolbm.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body onload="Book()"> 
@@ -16,7 +18,33 @@
     </div> 
     <h1 class="main-title"> YOUR LIBRARY </h1> 
     <button class="add-button" data-hover="A BOOK!"> <div> ADD </div> </button>
+    <div class="g-signin" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script src="./scripts/main-script.js"> </script>
+    <script>
+        function onSignIn () 
+	    {
+		    var instance = gapi.auth2.getAuthInstance();
+
+        	instance.signIn().then((response) => {
+
+                var user = response.getBasicProfile();
+
+                var data = {
+                 id: user.getId(),
+                 email: user.getEmail(),
+                 name: user.getName(),
+                }
+
+                console.log(data);
+
+                },
+            
+                err => {
+                // error handling 
+                console.log(error);}
+            );
+        }
+    </script>
 </body>
 
 </html>
