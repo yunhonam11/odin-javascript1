@@ -1,0 +1,248 @@
+body
+{
+    overflow: hidden;
+    margin: 0;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.readList
+{
+    height: 98.75vh;
+    width: 500px;
+    border: 5px solid #FFF8DC;
+    overflow-y: auto;
+    float: left;
+}
+
+.notReadList
+{
+    height: 98.75vh;
+    width: 500px;
+    border: 5px solid #E9967A;
+    overflow-y: auto;
+}
+
+.catalogue h1
+{
+    text-align: center;
+    font-family: 'Metal Mania';
+    color: #DCDCDC;
+}
+
+.catalogue
+{
+    height: 99.3vh;
+    width: 1100px;
+    flex: 0 0 78%;
+}
+
+.card
+{
+    display: block;
+    width: 15rem;
+    height: 17.5rem;
+    float: left;
+    margin-left: 130px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #A1FFCE;  
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE); 
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE); 
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Stint Ultra Expanded';
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card button.delete-button
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #808080;
+    font-size: 20px;    
+    font-weight: bold;
+    position: relative;
+}
+
+.card button.delete-button:hover
+{
+    color: #D3D3D3;
+}
+
+.title
+{
+
+    color: #2F4F4F;
+}
+
+.author
+{
+    color: #708090;
+}
+
+.pgNum
+{
+    color: #778899;
+}
+
+.read-button
+{
+    border-radius: 50%;
+    padding: 12.5px;
+    font-size: 12.5px;
+    border: none;
+    background: #5D4157;  
+    background: -webkit-linear-gradient(to right, #A8CABA, #5D4157);  
+    background: linear-gradient(to right, #A8CABA, #5D4157); 
+    cursor: pointer;
+    color: #F5FFFA;
+    font-family: 'Stint Ultra Expanded';
+    font-weight: bold;
+    height: 50px;
+    width: 75px;
+}
+
+.read-button:hover
+{
+    box-shadow: 0 0 0 0 rgba(52.9, 0, 0, 0.8);
+    animation: pulse 1.5s infinite;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    color: #FF0000;
+}
+
+@keyframes pulse 
+{
+    70% { box-shadow: 0 0 0 20px rgba(52.9, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52.9, 0, 0, 0); }
+}
+
+.read-button:hover div
+{
+    font-size: 0px;
+}
+
+#move-right:hover:before
+{
+    animation: animRight 1s infinite;
+    content: attr(data-hover);
+}
+
+@keyframes animRight
+{
+    0% {margin-left: -30px;}
+    15% {margin-left: -20px;}
+    30% {margin-left: -10px;}
+    45% {margin-left: 0px;}
+    60% {margin-left: 10px;}
+    75% {margin-left: 20px;}
+    90% {margin-left: 30px;}
+    100% {margin-left: 0px;}
+}
+
+#move-left:hover:before
+{
+    animation: animLeft 1s infinite;
+    content: attr(data-hover);
+}
+
+@keyframes animLeft
+{
+    0% {margin-left: 30px;}
+    15% {margin-left: 20px;}
+    30% {margin-left: 10px;}
+    45% {margin-left: 0px;}
+    60% {margin-left: -10px;}
+    75% {margin-left: -20px;}
+    90% {margin-left: -30px;}
+    100% {margin-left: 0px;}
+}
+
+.main-title
+{
+    float: right;
+    margin-top: -550px;
+    margin-right: 50px;
+    color: #FFFAF0;
+}
+
+.add-button
+{
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-top: -425px;
+    margin-right: 75px;
+    transition: all .5s; 
+    font-family: 'Stint Ultra Expanded';
+}
+
+
+.add-button:hover div
+{
+    font-size: 0px;
+}
+
+.add-button:hover
+{
+    width: 200px;
+    background: #9796f0;  
+    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  
+    background: linear-gradient(to right, #fbc7d4, #9796f0); 
+}
+
+.add-button:hover:before
+{
+    animation: animAdd .2s;
+    content: attr(data-hover);
+}
+
+@keyframes animAdd 
+{
+    0% {font-size: 0;}
+    100% {font-size: 35px;}
+}
+
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+  
+
+::-webkit-scrollbar-track 
+{
+    background: #F7F8F8;  
+    background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8); 
+    background: linear-gradient(to right, #ACBB78, #F7F8F8);
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #434343, #000000);  
+    background: linear-gradient(to right, #434343, #000000); 
+    border-radius: 16px;
+    height: 1px;  
+}
+  
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #E6DADA;  
+    background: -webkit-linear-gradient(to right, #274046, #E6DADA); 
+    background: linear-gradient(to right, #274046, #E6DADA); 
+}
