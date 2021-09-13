@@ -1,5 +1,6 @@
 body
 {
+    overflow: hidden;
     margin: 0;
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
@@ -168,8 +169,9 @@ body
 {
     float: right;
     margin-top: -550px;
-    margin-right: 50px;
+    margin-left: 1075px;
     color: #FFFAF0;
+    position: fixed;
 }
 
 .add-button
@@ -186,9 +188,10 @@ body
     cursor: pointer;
     float: right;
     margin-top: -425px;
-    margin-right: 75px;
+    margin-left: 625px;
     transition: all .5s; 
     font-family: 'Stint Ultra Expanded';
+    position: fixed;
 }
 
 
@@ -244,4 +247,106 @@ body
     background: #E6DADA;  
     background: -webkit-linear-gradient(to right, #274046, #E6DADA); 
     background: linear-gradient(to right, #274046, #E6DADA); 
+}
+
+.addBook
+{
+    position: fixed;
+    display: none;
+    z-index: 99 !important;
+    height: 500px;
+    width: 600px;
+    margin-left: 375px;
+    margin-top: 60px;
+    background: #2193b0;  
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+    border-radius: 16px;
+}
+
+.addBook-close
+{
+    margin-left: 285px;
+    margin-top: 15px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.addBook-close:hover
+{
+    color: #DC143C;
+}
+
+.addBook-input
+{
+    margin-top: 20px;
+}
+
+.addBook-input input
+{
+    margin-top: 15px;
+    margin-left: 155px;
+    width: 250px;
+    height: 35px;
+    border-radius: 18px;
+    border: none;
+    text-align: center;
+    color: #2F4F4F;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.addBook-input input:focus
+{
+    outline: none;
+}
+
+h3
+{
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 35px;
+    color: #2F4F4F;
+}
+
+.addBook-pgNum
+{
+    margin-left: 270px;
+    display: block;
+    width: 65px;
+    border-radius: 16px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.addBook-pgNum:focus
+{
+    outline: none;
+}
+
+.arYes
+{
+    margin-left: 270px;
+}
+
+.addBook-submit
+{
+    margin-top: 30px;
+    margin-left: 245px;
+    background: transparent;
+    border-radius: 16px;
+    border: 2px solid #FFE4C4;
+    color: #FFE4C4;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.addBook-submit:hover
+{
+    color: #D2691E;
+    border: 2px solid #D2691E;
 }

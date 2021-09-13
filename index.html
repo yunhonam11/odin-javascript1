@@ -7,44 +7,30 @@
     <link rel="icon" href="./images/library-icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f0f9f1bddf.js" crossorigin="anonymous"></script>
-    <meta name="google-signin-client_id" content="708556494888-torhc96liijk13b9av7c2nm02qplolbm.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body onload="Book()"> 
+    <div class="addBook"> 
+        <button class="addBook-close" onclick="closeAddBook()"> 
+            <i class='fas fa-times'></i> 
+        </button> 
+        <div class="addBook-input">
+            <input class="addBook-title" type="text" value="TITLE" /> 
+            <input class="addBook-author" type="text" value="AUTHOR" /> 
+        </div>
+        <h3 class="addBook-pgNum-text"> Page Numbers? </h3> <input class="addBook-pgNum" type="number"/>
+        <h3> Have you read it? </h3> 
+        <input class="arYes" name="addBook-read" type="radio"> <label> Yes </label> 
+        <input class="arNo" name="addBook-read" type="radio" checked>  <label> No </label>
+        <br> <button class="addBook-submit" onclick="addBook()"> SUBMIT </button>
+    </div> 
     <div class="catalogue">
         <div class="readList"> <h1> Books You've Read </h1> </div>
         <div class="notReadList"> <h1> Books You Haven't Read </h1> </div>
     </div> 
     <h1 class="main-title"> YOUR LIBRARY </h1> 
-    <button class="add-button" data-hover="A BOOK!"> <div> ADD </div> </button>
-    <div class="g-signin" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <button class="add-button" data-hover="A BOOK!" onclick="openAddBook()"> <div> ADD </div> </button>
     <script src="./scripts/main-script.js"> </script>
-    <script>
-        function onSignIn () 
-	    {
-		    var instance = gapi.auth2.getAuthInstance();
-
-        	instance.signIn().then((response) => {
-
-                var user = response.getBasicProfile();
-
-                var data = {
-                 id: user.getId(),
-                 email: user.getEmail(),
-                 name: user.getName(),
-                }
-
-                console.log(data);
-
-                },
-            
-                err => {
-                // error handling 
-                console.log(error);}
-            );
-        }
-    </script>
 </body>
 
 </html>
